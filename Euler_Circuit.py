@@ -1,4 +1,5 @@
-from Graph import*
+from k_general_kit.gen_func import *
+from k_graph_kit import *
 
 print("Welcome! This program aims to return an eventual Euler circuit a  given graph. Refer to 'Graph' help for more information")
 

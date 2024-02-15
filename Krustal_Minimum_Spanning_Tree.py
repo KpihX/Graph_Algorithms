@@ -1,4 +1,5 @@
-from Graph import*
+from k_general_kit.gen_func import *
+from k_graph_kit import *
 
 print("Welcome! This program aims to return the minimum spanning tree of a non oriented given graph. Refer to 'Graph' help for more information")
 
@@ -23,7 +24,7 @@ for i, vertex in zip(range(l), Vertices):
                 if Weights.strip() == '':
                     break
                 Weights = Weights.split(',')
-                if any([not isUFloat(weight) or weight == '0' for weight in Weights]):
+                if any([not is_u_float(weight) or weight == '0' for weight in Weights]):
                     print("\nOne of the given weights is not a strict positive real number!")
                     continue
                 G.Edges[fs({vertex, vertex2})] = [float(weight) for weight in Weights]

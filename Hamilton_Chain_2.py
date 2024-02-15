@@ -1,4 +1,5 @@
-from Graph import*
+from k_general_kit.gen_func import *
+from k_graph_kit import *
 
 print("Welcome! This program aims to return an eventual Hamilton chain a  given graph. Refer to 'Graph' help for more information")
 
@@ -36,7 +37,7 @@ while True:
         print("\nInvalid input!")
         continue
     
-    EdgeWeights = splitIter(EdgeWeights, ",-=", False)
+    EdgeWeights = split_iter(EdgeWeights, ",-=", False)
     vertex1, vertex2 = EdgeWeights[0], EdgeWeights[1]
     if vertex1 not in G.Vertices or vertex2 not in G.Vertices:
         print("\nAt least one of the given vertex is not in the vertices of the graph defined upstream!")
